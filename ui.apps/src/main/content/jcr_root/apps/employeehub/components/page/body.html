@@ -1,0 +1,8 @@
+<!--/* Extends Core WCM Page v3 body — layout wrapper only; authoring handled by supertype */-->
+<div class="eh-page">
+    <div class="eh-page-main">
+        <sly data-sly-use.templatedContainer="com.day.cq.wcm.foundation.TemplatedContainer"
+             data-sly-repeat.child="${templatedContainer.structureResources}"
+             data-sly-resource="${child.path @ resourceType=child.resourceType, decorationTagName='div'}"/>
+    </div>
+</div>

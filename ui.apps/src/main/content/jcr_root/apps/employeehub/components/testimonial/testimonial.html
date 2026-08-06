@@ -1,0 +1,11 @@
+<!--/* Testimonial Component */-->
+<div class="eh-section eh-section--sm" data-sly-use.model="com.abc.employeehub.core.models.TestimonialModel">
+    <h2 class="eh-home-section-title">What Our Employees Say</h2>
+    <div class="eh-testimonial-grid">
+        <div class="eh-card eh-testimonial" data-sly-repeat.item="${model.testimonialItems}">
+            <p class="eh-testimonial__feedback">${item.feedback}</p>
+            <p class="eh-testimonial__name">${item.employeeName}</p>
+            <p class="eh-testimonial__designation">${item.designation}</p>
+        </div>
+    </div>
+</div>

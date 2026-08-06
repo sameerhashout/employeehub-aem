@@ -1,0 +1,13 @@
+<!--/* Employee Spotlight Component */-->
+<div class="eh-section eh-section--sm" data-sly-use.model="com.abc.employeehub.core.models.EmployeeSpotlightModel">
+    <h2 class="eh-home-section-title">Employee Spotlight</h2>
+    <div class="eh-card eh-spotlight">
+        <div class="eh-spotlight__avatar">${model.initials}</div>
+        <div class="eh-spotlight__body">
+            <p class="eh-spotlight__label">Featured This Month</p>
+            <h3 class="eh-spotlight__name">${model.employeeName}</h3>
+            <p class="eh-spotlight__designation">${model.designation}</p>
+            <div class="eh-spotlight__text">${model.spotlightText @ context='html'}</div>
+        </div>
+    </div>
+</div>

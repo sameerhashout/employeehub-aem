@@ -1,0 +1,10 @@
+<!--/* Header Component */-->
+<header class="eh-header">
+    <div class="eh-container eh-header__inner">
+        <div class="eh-header__logo">
+            <span class="eh-header__logo-icon">A</span>
+            <span>${properties.logoText || 'ABC Employee Hub'}</span>
+        </div>
+        <sly data-sly-resource="${'navigation' @ resourceType='employeehub/components/navigation'}"/>
+    </div>
+</header>

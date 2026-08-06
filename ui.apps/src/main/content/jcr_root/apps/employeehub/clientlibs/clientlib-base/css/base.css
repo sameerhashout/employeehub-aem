@@ -1,0 +1,120 @@
+/* ABC Employee Hub — Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --eh-primary: #0057b8;
+    --eh-primary-light: #e8f1fb;
+    --eh-secondary: #0a2540;
+    --eh-accent: #00b4d8;
+    --eh-accent-warm: #ff6b35;
+    --eh-text: #1a1a2e;
+    --eh-text-muted: #5c6578;
+    --eh-bg: #f0f4f8;
+    --eh-white: #ffffff;
+    --eh-border: #dde3ec;
+    --eh-shadow: 0 4px 24px rgba(10, 37, 64, 0.08);
+    --eh-shadow-hover: 0 12px 40px rgba(10, 37, 64, 0.14);
+    --eh-radius: 12px;
+    --eh-radius-lg: 20px;
+}
+
+/* Scope resets to page content only — global * breaks AEM authoring dialogs */
+.eh-page,
+.eh-page * {
+    box-sizing: border-box;
+}
+
+.eh-page {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    color: var(--eh-text);
+    background: var(--eh-bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+.eh-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.eh-section {
+    padding: 56px 0;
+}
+
+.eh-section--sm {
+    padding: 32px 0;
+}
+
+.eh-section__label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--eh-accent);
+    margin-bottom: 8px;
+}
+
+.eh-card {
+    background: var(--eh-white);
+    border-radius: var(--eh-radius);
+    box-shadow: var(--eh-shadow);
+    padding: 28px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid var(--eh-border);
+}
+
+.eh-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--eh-shadow-hover);
+}
+
+.eh-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: var(--eh-primary);
+    color: var(--eh-white);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.eh-btn:hover {
+    background: var(--eh-secondary);
+    transform: translateY(-1px);
+}
+
+.eh-btn--outline {
+    background: transparent;
+    border: 2px solid var(--eh-white);
+    color: var(--eh-white);
+}
+
+.eh-btn--outline:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.eh-page-main {
+    min-height: 50vh;
+}
+
+/* Main editable area width; header/hero/footer stay full width via component CSS */
+.eh-page-main > div > .aem-Grid,
+.eh-page-main > div > .responsivegrid,
+.eh-page-main > .aem-Grid,
+.eh-page-main > .responsivegrid {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px 48px;
+}

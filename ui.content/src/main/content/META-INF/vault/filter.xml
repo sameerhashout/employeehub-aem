@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/content/employeehub"/>
+    <filter root="/content/dam/employeehub"/>
+    <filter root="/content/cq:tags/employeehub"/>
+</workspaceFilter>

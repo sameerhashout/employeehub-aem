@@ -1,0 +1,6 @@
+{
+  "portalName": "ABC Employee Hub",
+  "environmentName": "publish",
+  "defaultDepartment": "all",
+  "maximumSearchResults": 15
+}

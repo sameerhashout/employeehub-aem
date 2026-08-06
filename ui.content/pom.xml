@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.abc.employeehub</groupId>
+        <artifactId>employeehub</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>employeehub.ui.content</artifactId>
+    <packaging>content-package</packaging>
+    <name>Employee Hub - UI Content</name>
+    <description>Seed content for local setup only (pages, tags, data). Not deployed by autoInstallSinglePackage. Templates are in ui.config.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.abc.employeehub</groupId>
+            <artifactId>employeehub.ui.apps</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>com.abc.employeehub</group>
+                    <name>employeehub.ui.content</name>
+                    <packageType>content</packageType>
+                    <skipValidation>true</skipValidation>
+                    <accessControlHandling>ignore</accessControlHandling>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

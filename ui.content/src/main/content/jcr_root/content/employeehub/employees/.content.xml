@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/employeehub/settings/wcm/templates/employee-content-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Employees"
+        sling:resourceType="employeehub/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/header"
+                logoText="ABC Employee Hub">
+                <navigation jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/navigation"/>
+            </header>
+            <breadcrumb jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/breadcrumb"/>
+            <main jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/title"
+                    jcr:title="Employee Directory"/>
+                <text
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/text"
+                    text="&lt;p&gt;Search for colleagues by name, email, or department. Browse featured employees below.&lt;/p&gt;"/>
+                <employeesearch
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/employeesearch"
+                    placeholder="Try searching &quot;john&quot;, &quot;hr&quot;, or &quot;finance&quot;..."
+                    buttonText="Search"
+                    maximumResults="{Long}20"/>
+                <featured_employees
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/gridcontainer"
+                    jcr:title="Featured Employees">
+                    <employeecard_john
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="employeehub/components/employeecard"
+                        employeeName="John Doe"
+                        email="john.doe@abc.com"
+                        department="Information Technology"
+                        employeeId="EMP001"
+                        cq:tags="[employeehub:department/it,employeehub:role/manager,employeehub:employment-type/permanent]"/>
+                    <employeecard_sarah
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="employeehub/components/employeecard"
+                        employeeName="Sarah Smith"
+                        email="sarah.smith@abc.com"
+                        department="Human Resources"
+                        employeeId="EMP002"
+                        cq:tags="[employeehub:department/hr,employeehub:role/manager,employeehub:employment-type/permanent]"/>
+                    <employeecard_mike
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="employeehub/components/employeecard"
+                        employeeName="Mike Johnson"
+                        email="mike.johnson@abc.com"
+                        department="Finance"
+                        employeeId="EMP003"
+                        cq:tags="[employeehub:department/finance,employeehub:role/analyst,employeehub:employment-type/permanent]"/>
+                </featured_employees>
+            </main>
+            <footer jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/footer"/>
+        </root>
+    </jcr:content>
+</jcr:root>

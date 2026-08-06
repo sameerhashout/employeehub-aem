@@ -1,0 +1,11 @@
+<!--/* Employee Search Component */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.search'}"/>
+<div class="eh-search-wrap" data-sly-use.model="com.abc.employeehub.core.models.EmployeeSearchModel">
+    <p class="eh-search-wrap__label">Employee Directory Search</p>
+    <div class="eh-search" data-endpoint="${model.searchEndpoint}" data-max-results="${model.maximumResults}">
+        <input type="text" class="eh-search__input" placeholder="${model.placeholder}"/>
+        <button class="eh-btn eh-search__btn">${model.buttonText}</button>
+    </div>
+    <div class="eh-search__results"></div>
+</div>

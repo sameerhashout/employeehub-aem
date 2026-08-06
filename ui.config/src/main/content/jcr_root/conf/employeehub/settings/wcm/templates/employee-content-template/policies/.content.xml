@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2026-07-05T21:30:00.000+05:30"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Employee Content Template Policy">
+        <root jcr:primaryType="nt:unstructured">
+            <header jcr:primaryType="nt:unstructured"/>
+            <breadcrumb jcr:primaryType="nt:unstructured"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Employee Hub Content Main"
+                sling:resourceType="wcm/core/components/policy/policy"
+                components="[/apps/employeehub/components/employeesearch,/apps/employeehub/components/employeecard,/apps/employeehub/components/departmentcard,/apps/employeehub/components/faq,/apps/employeehub/components/text,/apps/employeehub/components/image,/apps/employeehub/components/title,/apps/employeehub/components/gridcontainer,/apps/employeehub/components/contactcards,group:Employee Hub]">
+                <employeehub jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <gridcontainer
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Employee Hub Grid Container"
+                            sling:resourceType="wcm/core/components/policy/policy"
+                            components="[/apps/employeehub/components/departmentcard,/apps/employeehub/components/employeecard,group:Employee Hub]"/>
+                    </components>
+                </employeehub>
+            </main>
+            <footer jcr:primaryType="nt:unstructured"/>
+        </root>
+    </jcr:content>
+</jcr:root>

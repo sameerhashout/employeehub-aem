@@ -1,0 +1,12 @@
+<!--/* Grid Container — lays out child components in a responsive card grid */-->
+<div class="eh-container eh-section eh-section--sm" data-sly-test="${properties.jcr:title}">
+    <h2 class="eh-title">${properties.jcr:title}</h2>
+</div>
+<div class="eh-container eh-section eh-section--sm">
+    <div class="eh-grid">
+        <sly data-sly-list.child="${resource.listChildren}">
+            <sly data-sly-test="${child.name != 'jcr:content' && child.name != 'cq:annotations' && child.name != 'jcr:title'}"
+                 data-sly-resource="${child.path @ decorationTagName='div', cssClassName='eh-grid__item'}"/>
+        </sly>
+    </div>
+</div>

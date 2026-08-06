@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Employee Hub Content Main Area"
+    jcr:description="Allowed components for inner content pages"
+    sling:resourceType="wcm/core/components/policy/policy"
+    components="[/apps/employeehub/components/employeesearch,/apps/employeehub/components/employeecard,/apps/employeehub/components/departmentcard,/apps/employeehub/components/faq,/apps/employeehub/components/text,/apps/employeehub/components/image,/apps/employeehub/components/title,/apps/employeehub/components/gridcontainer,/apps/employeehub/components/contactcards,group:Employee Hub]"/>

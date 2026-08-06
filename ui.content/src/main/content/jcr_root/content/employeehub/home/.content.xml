@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/employeehub/settings/wcm/templates/employee-landing-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Home"
+        sling:resourceType="employeehub/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/header"
+                logoText="ABC Employee Hub">
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/navigation"/>
+            </header>
+            <hero
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/hero"
+                title="Welcome to ABC Employee Hub"
+                subtitle="Your single source of truth for company information, people, and resources"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <announcement
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/announcement"
+                    title="Company Announcement"
+                    message="Open Enrollment for benefits starts July 1. Visit HR for details."/>
+                <quicklinks
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/quicklinks">
+                    <item0 jcr:primaryType="nt:unstructured" label="Find Employees" description="Search our employee directory" link="/content/employeehub/employees.html"/>
+                    <item1 jcr:primaryType="nt:unstructured" label="Departments" description="Browse department contacts" link="/content/employeehub/departments.html"/>
+                    <item2 jcr:primaryType="nt:unstructured" label="FAQ" description="Answers to common questions" link="/content/employeehub/faq.html"/>
+                    <item3 jcr:primaryType="nt:unstructured" label="Contact HR" description="Get in touch with support" link="/content/employeehub/contact.html"/>
+                </quicklinks>
+                <employeespotlight
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/employeespotlight"
+                    employeeName="Sarah Smith"
+                    designation="HR Director"
+                    spotlightText="&lt;p&gt;Sarah leads our Human Resources team and is passionate about employee engagement and growth.&lt;/p&gt;"/>
+                <testimonial
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/testimonial">
+                    <testimonialItems jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            employeeName="John Doe"
+                            designation="IT Manager"
+                            feedback="The Employee Hub made it so easy to find colleagues across departments."/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            employeeName="Mike Johnson"
+                            designation="Finance Analyst"
+                            feedback="I never miss company announcements anymore. Everything is in one place."/>
+                    </testimonialItems>
+                </testimonial>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/footer"
+                copyrightText="© 2025 ABC Corporation. All rights reserved."/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.abc.employeehub</groupId>
+        <artifactId>employeehub</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>employeehub.all</artifactId>
+    <packaging>content-package</packaging>
+    <name>Employee Hub - All</name>
+    <description>Code deploy package (ui.apps + ui.config with templates). Pages/content authored in AEM.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.abc.employeehub</groupId>
+            <artifactId>employeehub.ui.apps</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.abc.employeehub</groupId>
+            <artifactId>employeehub.ui.config</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>com.abc.employeehub</group>
+                    <name>employeehub.all</name>
+                    <packageType>container</packageType>
+                    <skipValidation>true</skipValidation>
+                    <subPackages>
+                        <subPackage>
+                            <groupId>com.abc.employeehub</groupId>
+                            <artifactId>employeehub.ui.apps</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.abc.employeehub</groupId>
+                            <artifactId>employeehub.ui.config</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                    </subPackages>
+                </configuration>
+            </plugin>
+            <!-- Installs to AEM only when -PautoInstallSinglePackage is active -->
+            <plugin>
+                <groupId>com.day.jcr.vault</groupId>
+                <artifactId>content-package-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

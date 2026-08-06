@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/employeehub/settings/wcm/templates/employee-content-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="FAQ"
+        sling:resourceType="employeehub/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/header" logoText="ABC Employee Hub">
+                <navigation jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/navigation"/>
+            </header>
+            <breadcrumb jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/breadcrumb"/>
+            <main jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/title" jcr:title="Frequently Asked Questions"/>
+                <faq jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/faq">
+                    <faqItems jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured"
+                            question="How do I reset my company password?"
+                            answer="Contact the IT Help Desk at it-help@abc.com or call extension 4500."/>
+                        <item1 jcr:primaryType="nt:unstructured"
+                            question="Where can I find the employee handbook?"
+                            answer="The employee handbook is available in the Documents section of the Employee Hub and on the HR SharePoint site."/>
+                        <item2 jcr:primaryType="nt:unstructured"
+                            question="How do I request time off?"
+                            answer="Submit a leave request through the HR portal. Your manager will receive an approval notification."/>
+                        <item3 jcr:primaryType="nt:unstructured"
+                            question="Who do I contact for benefits questions?"
+                            answer="Reach out to Sarah Smith in Human Resources at sarah.smith@abc.com."/>
+                    </faqItems>
+                </faq>
+            </main>
+            <footer jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/footer"/>
+        </root>
+    </jcr:content>
+</jcr:root>

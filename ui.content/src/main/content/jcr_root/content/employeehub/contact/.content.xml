@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/employeehub/settings/wcm/templates/employee-content-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Contact"
+        sling:resourceType="employeehub/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/header" logoText="ABC Employee Hub">
+                <navigation jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/navigation"/>
+            </header>
+            <breadcrumb jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/breadcrumb"/>
+            <main jcr:primaryType="nt:unstructured" sling:resourceType="wcm/foundation/components/responsivegrid">
+                <title jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/title" jcr:title="Contact Us"/>
+                <text jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/text"
+                    text="&lt;p&gt;Need help? Reach out to the right team below.&lt;/p&gt;"/>
+                <contactcards jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/contactcards"/>
+            </main>
+            <footer jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/footer"
+                copyrightText="© 2025 ABC Corporation. All rights reserved."/>
+        </root>
+    </jcr:content>
+</jcr:root>

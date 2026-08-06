@@ -1,0 +1,5 @@
+{
+    "user.mapping": [
+        "employeehub.core:employeehub-service=[employeehub-service]"
+    ]
+}

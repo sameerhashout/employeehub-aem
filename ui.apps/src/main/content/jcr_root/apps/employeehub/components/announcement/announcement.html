@@ -1,0 +1,8 @@
+<!--/* Announcement Banner Component */-->
+<div data-sly-use.model="com.abc.employeehub.core.models.AnnouncementBannerModel"
+     data-sly-test="${model.enabled}"
+     class="eh-announcement"
+     style="background-color: ${model.bannerColor @ context='styleString'};">
+    <span class="eh-announcement__title">${model.title}:</span>
+    <span class="eh-announcement__message">${model.message}</span>
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.abc.employeehub</groupId>
+        <artifactId>employeehub</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>employeehub.ui.config</artifactId>
+    <packaging>content-package</packaging>
+    <name>Employee Hub - UI Config</name>
+    <description>OSGi configurations and editable templates (/conf/employeehub).</description>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>com.abc.employeehub</group>
+                    <name>employeehub.ui.config</name>
+                    <packageType>application</packageType>
+                    <skipValidation>true</skipValidation>
+                    <accessControlHandling>ignore</accessControlHandling>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

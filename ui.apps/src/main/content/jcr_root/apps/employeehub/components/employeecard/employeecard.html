@@ -1,0 +1,11 @@
+<!--/* Employee Card Component */-->
+<div class="eh-card eh-employee-card" data-sly-use.model="com.abc.employeehub.core.models.EmployeeCardModel">
+    <img data-sly-test="${model.photo}" src="${model.photo}" alt="${model.employeeName}" class="eh-employee-card__photo"/>
+    <div data-sly-test="${!model.photo}" class="${model.avatarClass}">${model.initials}</div>
+    <h3 class="eh-employee-card__name">${model.employeeName}</h3>
+    <p class="eh-employee-card__dept">${model.department}</p>
+    <p class="eh-employee-card__email">${model.email}</p>
+    <div class="eh-employee-card__tags" data-sly-test="${model.tagTitles.size > 0}">
+        <span class="eh-tag" data-sly-repeat.tag="${model.tagTitles}">${tag}</span>
+    </div>
+</div>

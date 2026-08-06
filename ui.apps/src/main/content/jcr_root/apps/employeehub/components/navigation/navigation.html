@@ -1,0 +1,13 @@
+<!--/* Navigation Component */-->
+<nav class="eh-header__nav">
+    <sly data-sly-list.nav="${resource.listChildren}">
+        <a href="${nav.link @ context='uri'}">${nav.label || 'Link'}</a>
+    </sly>
+    <sly data-sly-test="${!resource.hasChildren}">
+        <a href="/content/employeehub/home.html">Home</a>
+        <a href="/content/employeehub/employees.html">Employees</a>
+        <a href="/content/employeehub/departments.html">Departments</a>
+        <a href="/content/employeehub/faq.html">FAQ</a>
+        <a href="/content/employeehub/contact.html">Contact</a>
+    </sly>
+</nav>

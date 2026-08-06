@@ -1,0 +1,6 @@
+{
+    "scripts": [
+        "create service user employeehub-service",
+        "set ACL for employeehub-service\n  allow jcr:read on /content/employeehub/data\n  allow jcr:read on /content/dam/employeehub\nend"
+    ]
+}

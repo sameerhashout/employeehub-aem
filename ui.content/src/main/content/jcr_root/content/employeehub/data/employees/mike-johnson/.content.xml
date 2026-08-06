@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="nt:unstructured"
+    employeeName="Mike Johnson"
+    email="mike.johnson@abc.com"
+    department="Finance"
+    photo="/content/dam/employeehub/employees/mike-johnson.jpg"
+    employeeId="EMP003"
+    cq:tags="[employeehub:department/finance,employeehub:role/analyst,employeehub:employment-type/permanent]"/>

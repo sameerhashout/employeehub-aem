@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.abc.employeehub</groupId>
+        <artifactId>employeehub</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>employeehub.ui.apps</artifactId>
+    <packaging>content-package</packaging>
+    <name>Employee Hub - UI Apps</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.abc.employeehub</groupId>
+            <artifactId>employeehub.core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
+            <classifier>apis</classifier>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.jackrabbit</groupId>
+                <artifactId>filevault-package-maven-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <group>com.abc.employeehub</group>
+                    <name>employeehub.ui.apps</name>
+                    <packageType>application</packageType>
+                    <skipValidation>true</skipValidation>
+                    <accessControlHandling>ignore</accessControlHandling>
+                    <properties>
+                        <cloudManagerTarget>none</cloudManagerTarget>
+                    </properties>
+                    <embeddeds>
+                        <embedded>
+                            <groupId>com.abc.employeehub</groupId>
+                            <artifactId>employeehub.core</artifactId>
+                            <target>/apps/employeehub/install</target>
+                        </embedded>
+                    </embeddeds>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
