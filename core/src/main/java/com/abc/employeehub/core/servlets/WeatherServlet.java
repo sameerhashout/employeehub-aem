@@ -1,6 +1,10 @@
 package com.abc.employeehub.core.servlets;
 
-import com.abc.employeehub.core.services.WeatherService;
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.Servlet;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
@@ -8,9 +12,7 @@ import org.apache.sling.commons.json.JSONObject;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
-import javax.servlet.Servlet;
-import java.io.IOException;
-import java.util.Map;
+import com.abc.employeehub.core.services.WeatherService;
 
 @Component(
         service = Servlet.class,

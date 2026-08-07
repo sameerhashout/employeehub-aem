@@ -1,7 +1,14 @@
 package com.abc.employeehub.core.services.impl;
 
-import com.abc.employeehub.core.configurations.WeatherConfiguration;
-import com.abc.employeehub.core.services.WeatherService;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.sling.commons.json.JSONArray;
 import org.apache.sling.commons.json.JSONObject;
 import org.osgi.service.component.annotations.Activate;
@@ -11,14 +18,8 @@ import org.osgi.service.metatype.annotations.Designate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
-import java.util.Map;
+import com.abc.employeehub.core.configurations.WeatherConfiguration;
+import com.abc.employeehub.core.services.WeatherService;
 
 @Component(service = WeatherService.class, immediate = true)
 @Designate(ocd = WeatherConfiguration.class)
