@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/employeehub/settings/wcm/templates/employee-landing-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Events"
+        sling:resourceType="employeehub/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/header"
+                logoText="ABC Employee Hub">
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/navigation"/>
+            </header>
+            <hero
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/hero"
+                badge="Company Events"
+                title="Employee Hub Events"
+                subtitle="Stay up to date with everything happening across ABC Corporation"/>
+            <main
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid">
+                <countdown
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/countdown"
+                    heading="Next Company Event In"
+                    targetDate="{Date}2026-12-31T18:30:00.000+05:30"/>
+                <eventscarousel
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/eventscarousel"
+                    heading="Upcoming Events">
+                    <events jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            title="Annual Town Hall"
+                            description="Join the leadership team for our company-wide town hall covering strategy, wins, and the road ahead."
+                            eventDate="{Date}2026-09-15T10:00:00.000+05:30"
+                            cq:tags="[employeehub:event-type/new,employeehub:event-type/marquee]"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            title="Tech Innovation Day"
+                            description="A full day of internal tech talks, demos, and hands-on workshops from engineering teams."
+                            eventDate="{Date}2026-10-05T09:30:00.000+05:30"
+                            cq:tags="[employeehub:event-type/new]"/>
+                        <item2
+                            jcr:primaryType="nt:unstructured"
+                            title="Founders' Day (Archive)"
+                            description="Relive highlights from last year's Founders' Day celebration and awards ceremony."
+                            eventDate="{Date}2025-08-20T17:00:00.000+05:30"
+                            cq:tags="[employeehub:event-type/old]"/>
+                    </events>
+                </eventscarousel>
+                <weather
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/weather"
+                    heading="Weather at the Venue"
+                    city="Bengaluru"/>
+                <poll
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="employeehub/components/poll"
+                    pollId="events-2026"
+                    question="Which event are you most excited about?">
+                    <options jcr:primaryType="nt:unstructured">
+                        <item0 jcr:primaryType="nt:unstructured" label="Annual Town Hall"/>
+                        <item1 jcr:primaryType="nt:unstructured" label="Tech Innovation Day"/>
+                        <item2 jcr:primaryType="nt:unstructured" label="Sports Meet"/>
+                    </options>
+                </poll>
+            </main>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="employeehub/components/footer"
+                copyrightText="© 2026 ABC Corporation. All rights reserved."/>
+        </root>
+    </jcr:content>
+</jcr:root>

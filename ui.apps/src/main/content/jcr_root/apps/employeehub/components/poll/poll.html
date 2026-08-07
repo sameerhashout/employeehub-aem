@@ -1,0 +1,18 @@
+<!--/* Quick Poll Component — Sling Servlet + OSGi Service storing votes in the JCR */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.events'}"/>
+<div class="eh-poll eh-card" data-sly-use.model="com.abc.employeehub.core.models.PollModel"
+     data-poll-id="${model.pollId}">
+    <span class="eh-section__label">Quick Poll</span>
+    <h3 class="eh-poll__question">${model.question}</h3>
+    <div class="eh-poll__options" data-sly-test="${model.options.size > 0}">
+        <button type="button" class="eh-poll__option" data-sly-repeat.option="${model.options}"
+                data-option="${option.label}">
+            <span class="eh-poll__option-label">${option.label}</span>
+            <span class="eh-poll__bar"><span class="eh-poll__bar-fill"></span></span>
+            <span class="eh-poll__count">0</span>
+        </button>
+    </div>
+    <p class="eh-poll__total" aria-live="polite"></p>
+    <p data-sly-test="${model.options.size < 1}" class="eh-poll__empty">Add options in the component dialog.</p>
+</div>

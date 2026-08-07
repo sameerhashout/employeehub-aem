@@ -1,0 +1,18 @@
+<!--/* Countdown Component */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.events'}"/>
+<div class="eh-countdown" data-sly-use.model="com.abc.employeehub.core.models.CountdownModel">
+    <div class="eh-container eh-countdown__inner">
+        <p class="eh-countdown__heading">${model.heading}</p>
+        <div data-sly-test="${model.configured}"
+             class="eh-countdown__timer"
+             data-target="${model.targetIso}">
+            <div class="eh-countdown__unit"><span class="eh-countdown__value" data-unit="months">0</span><span class="eh-countdown__label">Months</span></div>
+            <div class="eh-countdown__unit"><span class="eh-countdown__value" data-unit="weeks">0</span><span class="eh-countdown__label">Weeks</span></div>
+            <div class="eh-countdown__unit"><span class="eh-countdown__value" data-unit="days">0</span><span class="eh-countdown__label">Days</span></div>
+            <div class="eh-countdown__unit"><span class="eh-countdown__value" data-unit="hours">0</span><span class="eh-countdown__label">Hours</span></div>
+            <div class="eh-countdown__unit"><span class="eh-countdown__value" data-unit="minutes">0</span><span class="eh-countdown__label">Minutes</span></div>
+        </div>
+        <p data-sly-test="${!model.configured}" class="eh-countdown__empty">Configure a target date in the component dialog.</p>
+    </div>
+</div>

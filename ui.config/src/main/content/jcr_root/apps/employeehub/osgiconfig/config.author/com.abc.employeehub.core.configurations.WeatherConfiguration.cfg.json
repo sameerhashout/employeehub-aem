@@ -1,0 +1,6 @@
+{
+  "geocodingApiUrl": "https://geocoding-api.open-meteo.com/v1/search",
+  "forecastApiUrl": "https://api.open-meteo.com/v1/forecast",
+  "defaultCity": "Bengaluru",
+  "timeoutMillis": 5000
+}

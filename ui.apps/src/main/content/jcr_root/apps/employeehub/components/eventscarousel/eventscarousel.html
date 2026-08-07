@@ -1,0 +1,32 @@
+<!--/* Events Carousel Component */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.events'}"/>
+<div class="eh-events" data-sly-use.model="com.abc.employeehub.core.models.EventsCarouselModel">
+    <div class="eh-container">
+        <span class="eh-section__label">Events</span>
+        <h2 class="eh-events__heading">${model.heading}</h2>
+
+        <div data-sly-test="${model.events.size > 0}" class="eh-events__carousel">
+            <button type="button" class="eh-events__nav eh-events__nav--prev" aria-label="Previous">&#8249;</button>
+            <div class="eh-events__track">
+                <article class="eh-events__slide" data-sly-repeat.event="${model.events}">
+                    <div class="eh-events__media">
+                        <img data-sly-test="${event.image}" src="${event.image}" alt="${event.title}"/>
+                        <div data-sly-test="${!event.image}" class="eh-events__media--placeholder">${event.title}</div>
+                    </div>
+                    <div class="eh-events__body">
+                        <div class="eh-events__tags" data-sly-test="${event.tagTitles.size > 0}">
+                            <span class="eh-tag" data-sly-repeat.tag="${event.tagTitles}">${tag}</span>
+                        </div>
+                        <h3 class="eh-events__title">${event.title}</h3>
+                        <p class="eh-events__date" data-sly-test="${event.formattedDate}">${event.formattedDate}</p>
+                        <p class="eh-events__desc">${event.description}</p>
+                    </div>
+                </article>
+            </div>
+            <button type="button" class="eh-events__nav eh-events__nav--next" aria-label="Next">&#8250;</button>
+        </div>
+
+        <p data-sly-test="${model.events.size < 1}" class="eh-events__empty">No events configured yet. Add events in the component dialog.</p>
+    </div>
+</div>

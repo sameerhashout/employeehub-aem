@@ -1,0 +1,12 @@
+<!--/* Weather Component — fetches live weather via Sling Servlet + OSGi Service */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.events'}"/>
+<div class="eh-weather eh-card" data-sly-use.model="com.abc.employeehub.core.models.WeatherComponentModel">
+    <span class="eh-section__label">Live Data</span>
+    <h3 class="eh-weather__heading">${model.heading}</h3>
+    <div class="eh-weather__controls">
+        <input type="text" class="eh-weather__input" value="${model.city}" placeholder="Enter a city"/>
+        <button type="button" class="eh-btn eh-weather__btn">Get Weather</button>
+    </div>
+    <div class="eh-weather__result" aria-live="polite"></div>
+</div>
