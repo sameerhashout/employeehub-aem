@@ -13,7 +13,7 @@
     <artifactId>employeehub.all</artifactId>
     <packaging>content-package</packaging>
     <name>Employee Hub - All</name>
-    <description>Code deploy package (ui.apps + ui.config with templates). Pages/content authored in AEM.</description>
+    <description>Employee Hub deployment package.</description>
 
     <dependencies>
         <dependency>
@@ -25,6 +25,12 @@
         <dependency>
             <groupId>com.abc.employeehub</groupId>
             <artifactId>employeehub.ui.config</artifactId>
+            <version>${project.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
+            <groupId>com.abc.employeehub</groupId>
+            <artifactId>employeehub.ui.content</artifactId>
             <version>${project.version}</version>
             <type>zip</type>
         </dependency>
@@ -50,6 +56,11 @@
                         <subPackage>
                             <groupId>com.abc.employeehub</groupId>
                             <artifactId>employeehub.ui.config</artifactId>
+                            <filter>true</filter>
+                        </subPackage>
+                        <subPackage>
+                            <groupId>com.abc.employeehub</groupId>
+                            <artifactId>employeehub.ui.content</artifactId>
                             <filter>true</filter>
                         </subPackage>
                     </subPackages>

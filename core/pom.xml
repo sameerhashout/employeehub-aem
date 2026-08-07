@@ -67,7 +67,10 @@
                 <extensions>true</extensions>
                 <configuration>
                     <instructions>
-                        <Import-Package>javax.annotation;version=0.0.0,*</Import-Package>
+                        <_noee>true</_noee>
+                        <_dsannotations-options>norequirements</_dsannotations-options>
+                        <_removeheaders>Require-Capability</_removeheaders>
+                        <Import-Package>javax.annotation;version=0.0.0,org.apache.sling.api;version=0.0.0,org.apache.sling.api.resource;version=0.0.0,org.apache.sling.api.servlets;version=0.0.0,org.apache.sling.commons.json;version=0.0.0,org.apache.sling.models.annotations;version=0.0.0,org.apache.sling.models.annotations.injectorspecific;version=0.0.0,*</Import-Package>
                         <Export-Package>com.abc.employeehub.core.*</Export-Package>
                         <Sling-Model-Packages>com.abc.employeehub.core.models</Sling-Model-Packages>
                     </instructions>

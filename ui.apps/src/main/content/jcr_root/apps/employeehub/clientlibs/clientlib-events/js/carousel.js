@@ -11,7 +11,9 @@
 
         function show(i) {
             index = (i + slides.length) % slides.length;
-            track.style.transform = 'translateX(-' + (index * 100) + '%)';
+            slides.forEach(function (slide, slideIndex) {
+                slide.classList.toggle('eh-events__slide--active', slideIndex === index);
+            });
         }
 
         var prev = carousel.querySelector('.eh-events__nav--prev');
@@ -23,10 +25,16 @@
             next.addEventListener('click', function () { show(index + 1); });
         }
 
-        var timer = setInterval(function () { show(index + 1); }, 6000);
+        var timer;
+        function startRotation() {
+            timer = setInterval(function () { show(index + 1); }, 6000);
+        }
+
         carousel.addEventListener('mouseenter', function () { clearInterval(timer); });
+        carousel.addEventListener('mouseleave', function () { startRotation(); });
 
         show(0);
+        startRotation();
     }
 
     function init() {

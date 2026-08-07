@@ -5,4 +5,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="Employee Hub Page"
     componentGroup=".hidden"
-    sling:resourceSuperType="core/wcm/components/page/v3/page"/>
+    sling:resourceSuperType="core/wcm/components/page/v2/page"/>

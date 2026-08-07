@@ -786,22 +786,29 @@
 }
 
 .eh-events__track {
-    display: flex;
+    flex: 1;
     overflow: hidden;
-    scroll-behavior: smooth;
-    transition: transform 0.4s ease;
     border-radius: var(--eh-radius);
 }
 
 .eh-events__slide {
-    flex: 0 0 100%;
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr;
     background: var(--eh-white);
     border: 1px solid var(--eh-border);
     border-radius: var(--eh-radius);
     overflow: hidden;
     box-shadow: var(--eh-shadow);
+}
+
+.eh-events__slide--active {
+    display: grid;
+    animation: eh-events-fade-in 0.3s ease;
+}
+
+@keyframes eh-events-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .eh-events__media img,

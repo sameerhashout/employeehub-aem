@@ -3,7 +3,7 @@
     xmlns:cq="http://www.day.com/jcr/cq/1.0"
     xmlns:jcr="http://www.jcp.org/jcr/1.0"
     xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
+    jcr:primaryType="nt:folder"
     jcr:title="Employee Hub Landing Main Area"
     jcr:description="Allowed components for the landing page main section"
     sling:resourceType="wcm/core/components/policy/policy"
