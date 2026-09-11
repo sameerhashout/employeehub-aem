@@ -4,7 +4,7 @@
     function decompose(target) {
         var now = new Date();
         if (isNaN(target.getTime()) || target <= now) {
-            return { months: 0, weeks: 0, days: 0, hours: 0, minutes: 0, done: true };
+            return { months: 0, weeks: 0, days: 0, hours: 0, minutes: 0, seconds: 0, done: true };
         }
         // Count whole calendar months first, then break the remainder down.
         var months = 0;
@@ -19,14 +19,16 @@
                 break;
             }
         }
-        var totalMinutes = Math.floor((target - cursor) / 60000);
-        var days = Math.floor(totalMinutes / 1440);
-        totalMinutes -= days * 1440;
+        var totalSeconds = Math.floor((target - cursor) / 1000);
+        var days = Math.floor(totalSeconds / 86400);
+        totalSeconds -= days * 86400;
         var weeks = Math.floor(days / 7);
         days -= weeks * 7;
-        var hours = Math.floor(totalMinutes / 60);
-        var minutes = totalMinutes - hours * 60;
-        return { months: months, weeks: weeks, days: days, hours: hours, minutes: minutes, done: false };
+        var hours = Math.floor(totalSeconds / 3600);
+        totalSeconds -= hours * 3600;
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds - minutes * 60;
+        return { months: months, weeks: weeks, days: days, hours: hours, minutes: minutes, seconds: seconds, done: false };
     }
 
     function render(timer) {
