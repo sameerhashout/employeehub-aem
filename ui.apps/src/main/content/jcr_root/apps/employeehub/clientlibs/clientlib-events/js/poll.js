@@ -2,6 +2,7 @@
     'use strict';
 
     var ENDPOINT = '/bin/employeehub/poll';
+    var CSRF_ENDPOINT = '/libs/granite/csrf/token.json';
 
     function renderResults(widget, data) {
         var total = data.total || 0;
@@ -24,19 +25,32 @@
 
     function load(widget) {
         var pollId = widget.getAttribute('data-poll-id');
-        fetch(ENDPOINT + '?pollId=' + encodeURIComponent(pollId))
+        fetch(ENDPOINT + '?pollId=' + encodeURIComponent(pollId), { credentials: 'same-origin' })
             .then(function (res) { return res.json(); })
             .then(function (data) { renderResults(widget, data); })
             .catch(function () { /* silent */ });
     }
 
+    // AEM rejects authenticated POSTs without a Granite CSRF token.
+    function getCsrfToken() {
+        return fetch(CSRF_ENDPOINT, { credentials: 'same-origin' })
+            .then(function (res) { return res.ok ? res.json() : { token: '' }; })
+            .then(function (data) { return data.token || ''; })
+            .catch(function () { return ''; });
+    }
+
     function vote(widget, option) {
         var pollId = widget.getAttribute('data-poll-id');
         var body = 'pollId=' + encodeURIComponent(pollId) + '&option=' + encodeURIComponent(option);
-        fetch(ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: body
+        getCsrfToken().then(function (token) {
+            var headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+            if (token) { headers['CSRF-Token'] = token; }
+            return fetch(ENDPOINT, {
+                method: 'POST',
+                credentials: 'same-origin',
+                headers: headers,
+                body: body
+            });
         })
             .then(function (res) { return res.json(); })
             .then(function (data) { renderResults(widget, data); })
