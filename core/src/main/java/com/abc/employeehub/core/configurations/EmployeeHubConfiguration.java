@@ -10,7 +10,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 public @interface EmployeeHubConfiguration {
 
     @AttributeDefinition(name = "Portal Name", description = "Display name of the Employee Hub Portal")
-    String portalName() default "ABC Employee Hub";
+    String portalName() default "Hashout Employee Hub";
 
     @AttributeDefinition(name = "Environment Name", description = "Current environment (dev, stage, prod)")
     String environmentName() default "dev";

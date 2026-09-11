@@ -15,7 +15,7 @@
             <header
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/header"
-                logoText="ABC Employee Hub">
+                logoText="Hashout Employee Hub">
                 <navigation jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/navigation"/>
             </header>
             <breadcrumb jcr:primaryType="nt:unstructured" sling:resourceType="employeehub/components/breadcrumb"/>
@@ -42,7 +42,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="employeehub/components/employeecard"
                         employeeName="John Doe"
-                        email="john.doe@abc.com"
+                        email="john.doe@hashout.tech"
                         department="Information Technology"
                         employeeId="EMP001"
                         cq:tags="[employeehub:department/it,employeehub:role/manager,employeehub:employment-type/permanent]"/>
@@ -50,7 +50,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="employeehub/components/employeecard"
                         employeeName="Sarah Smith"
-                        email="sarah.smith@abc.com"
+                        email="sarah.smith@hashout.tech"
                         department="Human Resources"
                         employeeId="EMP002"
                         cq:tags="[employeehub:department/hr,employeehub:role/manager,employeehub:employment-type/permanent]"/>
@@ -58,7 +58,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="employeehub/components/employeecard"
                         employeeName="Mike Johnson"
-                        email="mike.johnson@abc.com"
+                        email="mike.johnson@hashout.tech"
                         department="Finance"
                         employeeId="EMP003"
                         cq:tags="[employeehub:department/finance,employeehub:role/analyst,employeehub:employment-type/permanent]"/>

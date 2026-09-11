@@ -4,7 +4,7 @@
     xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="nt:unstructured"
     employeeName="John Doe"
-    email="john.doe@abc.com"
+    email="john.doe@hashout.tech"
     department="Information Technology"
     photo="/content/dam/employeehub/employees/john-doe.jpg"
     employeeId="EMP001"

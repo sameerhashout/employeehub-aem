@@ -1,4 +1,4 @@
-/* ABC Employee Hub — Components */
+/* Hashout Employee Hub — Components */
 
 /* ── Header ── */
 .eh-header {
@@ -281,7 +281,7 @@
     color: var(--eh-white);
     margin: 0 auto 16px;
     background: linear-gradient(135deg, var(--eh-primary), var(--eh-accent));
-    box-shadow: 0 4px 16px rgba(0,87,184,0.3);
+    box-shadow: 0 4px 16px rgba(15,157,119,0.3);
 }
 
 .eh-avatar--hr { background: linear-gradient(135deg, #7b2d8b, #c06caa); }
@@ -331,7 +331,7 @@
     font-size: 36px;
 }
 
-.eh-department-card__banner--it { background: linear-gradient(135deg, #0057b8, #00b4d8); }
+.eh-department-card__banner--it { background: linear-gradient(135deg, #0f9d77, #22c9ac); }
 .eh-department-card__banner--hr { background: linear-gradient(135deg, #7b2d8b, #c06caa); }
 .eh-department-card__banner--finance { background: linear-gradient(135deg, #1a7a4c, #52b788); }
 

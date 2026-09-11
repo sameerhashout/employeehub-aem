@@ -1,19 +1,19 @@
-/* ABC Employee Hub — Design System */
+/* Hashout Employee Hub — Design System */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --eh-primary: #0057b8;
-    --eh-primary-light: #e8f1fb;
-    --eh-secondary: #0a2540;
-    --eh-accent: #00b4d8;
+    --eh-primary: #0f9d77;
+    --eh-primary-light: #e6f7f1;
+    --eh-secondary: #0b2b26;
+    --eh-accent: #22c9ac;
     --eh-accent-warm: #ff6b35;
     --eh-text: #1a1a2e;
     --eh-text-muted: #5c6578;
-    --eh-bg: #f0f4f8;
+    --eh-bg: #f0f6f4;
     --eh-white: #ffffff;
-    --eh-border: #dde3ec;
-    --eh-shadow: 0 4px 24px rgba(10, 37, 64, 0.08);
-    --eh-shadow-hover: 0 12px 40px rgba(10, 37, 64, 0.14);
+    --eh-border: #d7e5e0;
+    --eh-shadow: 0 4px 24px rgba(11, 43, 38, 0.08);
+    --eh-shadow-hover: 0 12px 40px rgba(11, 43, 38, 0.14);
     --eh-radius: 12px;
     --eh-radius-lg: 20px;
 }

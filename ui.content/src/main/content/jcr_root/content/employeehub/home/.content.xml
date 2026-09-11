@@ -15,7 +15,7 @@
             <header
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/header"
-                logoText="ABC Employee Hub">
+                logoText="Hashout Employee Hub">
                 <navigation
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="employeehub/components/navigation"/>
@@ -23,7 +23,7 @@
             <hero
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/hero"
-                title="Welcome to ABC Employee Hub"
+                title="Welcome to Hashout Employee Hub"
                 subtitle="Your single source of truth for company information, people, and resources"/>
             <main
                 jcr:primaryType="nt:unstructured"
@@ -67,7 +67,7 @@
             <footer
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/footer"
-                copyrightText="© 2025 ABC Corporation. All rights reserved."/>
+                copyrightText="© 2025 Hashout Technologies. All rights reserved."/>
         </root>
     </jcr:content>
 </jcr:root>

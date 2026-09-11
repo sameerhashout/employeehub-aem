@@ -4,7 +4,7 @@
     xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="nt:unstructured"
     employeeName="Mike Johnson"
-    email="mike.johnson@abc.com"
+    email="mike.johnson@hashout.tech"
     department="Finance"
     photo="/content/dam/employeehub/employees/mike-johnson.jpg"
     employeeId="EMP003"

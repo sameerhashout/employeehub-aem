@@ -10,7 +10,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 public @interface AnnouncementConfiguration {
 
     @AttributeDefinition(name = "Announcement Message", description = "Default announcement message")
-    String announcementMessage() default "Welcome to ABC Employee Hub!";
+    String announcementMessage() default "Welcome to Hashout Employee Hub!";
 
     @AttributeDefinition(name = "Banner Color", description = "CSS background color for the banner")
     String bannerColor() default "#0066cc";

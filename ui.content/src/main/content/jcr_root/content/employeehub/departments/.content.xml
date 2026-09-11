@@ -19,7 +19,7 @@
             <header
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/header"
-                logoText="ABC Employee Hub">
+                logoText="Hashout Employee Hub">
                 <navigation
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="employeehub/components/navigation"/>
@@ -37,7 +37,7 @@
                 <text
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="employeehub/components/text"
-                    text="&lt;p&gt;Explore department contacts, managers, and team sizes across ABC Corporation.&lt;/p&gt;"/>
+                    text="&lt;p&gt;Explore department contacts, managers, and team sizes across Hashout.&lt;/p&gt;"/>
                 <department_grid
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="employeehub/components/gridcontainer">
@@ -67,7 +67,7 @@
             <footer
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="employeehub/components/footer"
-                copyrightText="© 2025 ABC Corporation. All rights reserved."/>
+                copyrightText="© 2025 Hashout Technologies. All rights reserved."/>
         </root>
     </jcr:content>
 </jcr:root>
